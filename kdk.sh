@@ -1,4 +1,5 @@
 #!/bin/bash
+#set -ex
 
 export FILE_NAME=$(cat /etc/machine-id)-$(date +%d-%m-%y)
 
@@ -24,7 +25,7 @@ for i in  "${cmds[@]}"
 do 
 	echo "+++++++++++++++++ $i " >> $FILE_NAME
 	$i >> $FILE_NAME
-	echo "++++++++++++++++++++++++++++++++++++++++  " >> $FILE_NAME
+	echo "++++++++++++++++++++++++++++++++++++++++  "  >> $FILE_NAME
 	printf "\n\n" >> $FILE_NAME 
 done
 
